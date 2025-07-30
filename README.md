@@ -1,37 +1,36 @@
 Transformers_BTC_price_predictoin
-This repository contains experiments with various deep learning and statistical models to predict Bitcoin (BTC) prices using high-frequency time series data. It includes implementations of Transformer models, BiLSTM, GARCH, and XGBoost for price forecasting and volatility analysis.
+This repository explores various deep learning and statistical models to forecast Bitcoin (BTC) prices using high-frequency time series data.
+It includes implementations of:
 
-Repository Structure
-📁 volatility/
-Contains additional scripts or notebooks related to volatility analysis of BTC prices.
+🧠 Transformer networks
 
-📄 BiLSTM.ipynb
-Notebook that trains and evaluates a Bidirectional LSTM model for BTC price prediction using historical data. Focuses on capturing temporal dependencies in price sequences.
+🔁 Bidirectional LSTM (BiLSTM)
 
-📄 btc-transformer.py
-Script defining the Transformer model architecture for BTC price prediction. It likely includes model initialization, forward pass, and relevant utility functions.
+📉 GARCH models for volatility estimation
 
-📄 btc_bilstm_model.pth
-Pretrained weights of the BiLSTM model, which can be loaded for inference or further fine-tuning.
+🌲 XGBoost for feature-based forecasting
 
-📄 data_15m.csv
-Raw BTC price data sampled at 15-minute intervals, used for model training.
+📁 Project Structure
+File/Folder	Description
+volatility/	Contains additional scripts and notebooks related to volatility analysis of BTC prices.
+BiLSTM.ipynb	Jupyter notebook to train and evaluate a Bidirectional LSTM model on historical BTC data, capturing temporal dependencies.
+btc-transformer.py	Python script defining the Transformer model architecture for price prediction. Includes model structure and forward pass logic.
+btc_bilstm_model.pth	Pretrained weights for the BiLSTM model — ready for inference or fine-tuning.
+data_15m.csv	Raw BTC price data sampled every 15 minutes, used for model training.
+data_15m_actual.csv	Likely contains ground-truth BTC prices aligned with model predictions. Useful for evaluation.
+data_hr.csv	BTC data sampled hourly — potentially used for long-horizon prediction tasks.
+garch_model.ipynb	Implements a GARCH (Generalized Autoregressive Conditional Heteroskedasticity) model for BTC volatility forecasting.
+model_transformers.pth	Pretrained Transformer model weights used for BTC price prediction.
+transformer_train.ipynb	Notebook for training the Transformer model. Covers data prep, model training, evaluation, and visualization.
+xgb.ipynb	Notebook leveraging XGBoost, a powerful tree-based model. Useful for price prediction, feature importance, or ensembling.
 
-📄 data_15m_actual.csv
-Likely contains ground-truth or post-processed actual prices corresponding to the predictions made by models.
+🧪 Goal of the Project
+To benchmark and compare multiple approaches for BTC price prediction across different modeling families:
 
-📄 data_hr.csv
-Hourly BTC price data, possibly used for longer-horizon modeling or comparative analysis with 15-minute data.
+Sequence models (Transformer, BiLSTM)
 
-📄 garch_model.ipynb
-Notebook implementing a GARCH (Generalized Autoregressive Conditional Heteroskedasticity) model to model and forecast BTC price volatility.
+Volatility models (GARCH)
 
-📄 model_transformers.pth
-Pretrained weights for the Transformer model used in price prediction.
+Tree-based regressors (XGBoost)
 
-📄 transformer_train.ipynb
-Notebook that handles training of the Transformer model on the 15-minute BTC dataset, possibly including data preparation, training loops, evaluation, and visualization.
-
-📄 xgb.ipynb
-Notebook using XGBoost, a tree-based model, to predict BTC prices or related metrics. May also be used for feature importance analysis or ensembling.
-
+Each model is evaluated on high-frequency BTC data (15-min & hourly), and pretrained models are included to streamline experimentation.
