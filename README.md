@@ -20,7 +20,7 @@ It includes implementations of:
 | `btc-transformer.py`       | Python script defining the **Transformer architecture** and forward pass for price prediction. |
 | `btc_bilstm_model.pth`     | Pretrained weights of the **BiLSTM model** for direct inference or fine-tuning. |
 | `data_15m.csv`             | Raw BTC price data sampled at **15-minute intervals**, used for model training. |
-| `data_15m_actual.csv`      | Likely contains **ground-truth BTC prices** used for validating model predictions. |
+| `data_15m_actual.csv`      | Contains **ground-truth BTC prices** used for validating model predictions. |
 | `data_hr.csv`              | BTC data sampled at **hourly frequency** for longer-horizon modeling or comparison. |
 | `garch_model.ipynb`        | Implements a **GARCH (Generalized Autoregressive Conditional Heteroskedasticity)** model to forecast BTC volatility. |
 | `model_transformers.pth`   | Pretrained weights of the **Transformer model** used in BTC prediction. |
